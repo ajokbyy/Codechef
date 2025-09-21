@@ -137,3 +137,4 @@ t = int(input())
 for _ in range(t):
     A, B, X = map(int, input().split())
     print((B - A) // X)
+
