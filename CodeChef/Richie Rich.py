@@ -134,6 +134,6 @@
 # ----------------------------------------------------------------------------
 # Method to flove this problem
 t = int(input())
-for _ in range(t):
+for i in range(t):
     A, B, X = map(int, input().split())
     print((B - A) // X)
