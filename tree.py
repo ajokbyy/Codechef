@@ -1,3 +1,9 @@
+def print_test_every():
+    print("Test only file")
+
+
+
+
 class TreeNode:
     def __init__(self, data):
         self.data = data
@@ -50,3 +56,6 @@ def build_product_tree():
 
 if __name__ == '__main__':
     build_product_tree()
+    print_test_every()
+
+    #this is comment to change
