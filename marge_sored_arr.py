@@ -32,24 +32,20 @@ def merge(nums1, m, nums2, n):
     # Start filling from the last index
     last = m + n - 1
 
-    # Pointers for nums1 and nums2
-    i = m - 1
-    j = n - 1
-
     # Merge in reverse order
-    while i >= 0 and j >= 0:
-        if nums1[i] > nums2[j]:
-            nums1[last] = nums1[i]
-            i -= 1
+    while m - 1 >= 0 and n-1 >= 0:
+        if nums1[m - 1] > nums2[n-1]:
+            nums1[last] = nums1[m - 1]
+            m -= 1
         else:
-            nums1[last] = nums2[j]
-            j -= 1
+            nums1[last] = nums2[n-1]
+            n -= 1
         last -= 1
 
     # If nums2 still has elements left
-    while j >= 0:
-        nums1[last] = nums2[j]
-        j -= 1
+    while n-1 >= 0:
+        nums1[last] = nums2[n-1]
+        n -= 1
         last -= 1
 
 
@@ -67,6 +63,7 @@ if __name__ == '__main__':
     n = int(input())
 
     # Extend nums1 to correct size if user did not add zeros
+    #So I added this line to automatically add zeros so nums1 becomes large enough to hold both arrays.
     while len(nums1) < m + n:
         nums1.append(0)
 
