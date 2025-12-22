@@ -1,28 +1,34 @@
 #include <iostream>
 using namespace std;
 
-int occurrences(int arr[], int n, int target){
+int main(){
+	int n;
+	cout<<"Enter the size of array : ";
+	cin>>n;
+	
+	int arr[n];
+	cout<<"Enter the arr elements : ";
 	for(int i =0; i<n; i++){
+		cin>>arr[i];
+	}
+	
+	int target;
+	cout<<"Enter the targeted value : ";
+	cin>>target;
+	
+	
+	bool found = false;
+	cout<<"Eelement found at index - ";
+	for(int i = 0; i<n; i++){
 		if(arr[i] == target){
 			cout<<i<<" ";
-			return i;
+			found = true;
 		}
 	}
-}
-
-int main(){
-	int arr[] = {50, 7, 91, 35, 33, 22, 35};
-	int n = sizeof(arr);
-	int target = 35;
 	
-	int index = occurrences(arr, n, target);
-//	if(index == -1){
-//		cout<<"Elemnt is not found";
-//	}
-//	else{
-//		cout << "Element is Found : "
-//     << "Value: " << arr[index]
-//     << " And it is found at index: " << index << "\n";
-//	}
+	if(!found){
+		cout<<"Not Found";
+	}
+	
 	return 0;
 }
